@@ -1,10 +1,10 @@
-package com.company.MegaSort;
+package com.company;
 
 import java.util.ArrayList;
 
 public class MySort {
 
-    public static void selectionSort (ArrayList<Integer> list) {
+    public static ArrayList selectionSort (ArrayList<Integer> list) {
         for (int i = 0; i < list.size() - 1; i++) {
             int indexMin = i;
             for (int j = i + 1; j < list.size(); j++) {
@@ -16,14 +16,10 @@ public class MySort {
             list.set(indexMin, list.get(i));
             list.set(i, tmp);
         }
-        System.out.println("Вуаля!");
-        for (Integer x: list
-        ) {
-            System.out.print(x + " ");
-        }
+        return list;
     }
 
-    public static void gnomeSort (ArrayList<Integer> list) {
+    public static ArrayList gnomeSort (ArrayList<Integer> list) {
         int i = 1;
         while (i < list.size()) {
             if (i == 0 || list.get(i - 1) <= list.get(i)) {
@@ -35,14 +31,10 @@ public class MySort {
                 i--;
             }
         }
-        System.out.println("Вуаля!");
-        for (Integer x: list
-        ) {
-            System.out.print(x + " ");
-        }
+        return list;
     }
 
-    public static void coctailSort (ArrayList<Integer> list) {
+    public static ArrayList coctailSort (ArrayList<Integer> list) {
         int begin = 0;
         int end = list.size() - 1;
         do {
@@ -64,6 +56,11 @@ public class MySort {
             }
             begin++;
         } while (begin < end);
+        return list;
+    }
+
+    public static void printArray(ArrayList<Integer> list) {
+        System.out.println();
         System.out.println("Вуаля!");
         for (Integer x: list
         ) {

@@ -1,4 +1,4 @@
-package com.company.MegaSort;
+package com.company;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -36,10 +36,13 @@ public class Main {
         int sortMethod = Integer.parseInt(reader.readLine());
         switch (sortMethod) {
             case 1: MySort.selectionSort(yourList);
+                    MySort.printArray(yourList);
                 break;
             case 2: MySort.gnomeSort(yourList);
+                    MySort.printArray(yourList);
                 break;
             case 3: MySort.coctailSort(yourList);
+                    MySort.printArray(yourList);
                 break;
             default: System.out.println("не будем сортировать :Р");
         }
